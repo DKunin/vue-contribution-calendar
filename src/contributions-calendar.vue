@@ -13,6 +13,12 @@
 
 <script>
   import { daysOfTheYear } from './generate-days';
+  // #eeeeee
+  // #d6e685
+  // #8cc665
+  // #44a340
+  // #1e6823
+
   export default {
     data() {
       return {
