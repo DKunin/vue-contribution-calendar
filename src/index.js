@@ -1,12 +1,15 @@
 import Vue from 'vue';
-import ContributionCalendar from './contributions-calendar';
-import styles from './styles/index.css';
+import Holder from './holder';
 
 if (__DEV__) {
     window.Vue = Vue;
     Vue.config.debug = true;
 };
 
+// import ContributionsCalendar from '../src/contributions-calendar';
+
+// Vue.component('contributions-calendar', ContributionsCalendar)
+
 new Vue({
-    ...ContributionCalendar
+    ...Holder
 }).$mount('#app');

@@ -1,43 +1,56 @@
 <template>
-   <svg width="600" height="100">
+   <svg width="820" height="100">
       <rect
         v-for="(day, index) in days"
-        :x="day.weekIndex + (day.weekIndex * 10)"
-        :y="(index % 7) + (index % 7) * 10"
+        :x="day.weekIndex + (day.weekIndex * 12)"
+        :y="(index % 7) + (index % 7) * 12"
         :fill="calculateValue(day.date)"
-        width="7"
-        height="7">
+        width="10"
+        height="10">
+        <title>{{day.date}}</title>
       </rect>
     </svg>
 </template>
 
 <script>
   import { daysOfTheYear } from './generate-days';
-  // #eeeeee
-  // #d6e685
-  // #8cc665
-  // #44a340
-  // #1e6823
 
   export default {
+    props: {
+      year: {
+        type: Number,
+        default: new Date().getFullYear()
+      },
+      history: Object
+    },
     data() {
       return {
-        days: daysOfTheYear(2017),
-        history: {
-          '31-12-2017': 8
-        }
-
+        days: []
       }
     },
     methods: {
       calculateValue(value) {
-        if (this.history[value]) {
-          return 'red'
+        const valueExists = this.history[value];
+        if (valueExists) {
+          if (valueExists >= 10) {
+            return '#1e6823'
+          }
+          if (valueExists >= 7 & valueExists < 10) {
+            return '#44a340'
+          }
+          if (valueExists >= 4 & valueExists < 7) {
+            return '#8cc665'
+          }
+          if (valueExists <= 3) {
+            return '#d6e685'
+          }
+
         }
-        return 'gray';
+        return '#eeeeee';
       }
     },
     mounted() {
+      this.days = daysOfTheYear(this.year);
     }
   }
 </script>

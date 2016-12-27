@@ -10,8 +10,8 @@
     "url": "dkunin.ru"
   },
   "scripts": {
-    "watch": "node node_modules/webpack/bin/webpack.js --watch --progress --colors",
-    "bundle": "NODE_ENV=production node node_modules/webpack/bin/webpack.js"
+    "watch": "node node_modules/webpack/bin/webpack.js --watch --progress --colors --config webpack.dev.js",
+    "build": "NODE_ENV=production node node_modules/webpack/bin/webpack.js --config webpack.prod.js"
   },
   "devDependencies": {
     "webpack": "1.13.3",
