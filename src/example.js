@@ -6,10 +6,6 @@ if (__DEV__) {
     Vue.config.debug = true;
 };
 
-// import ContributionsCalendar from '../src/contributions-calendar';
-
-// Vue.component('contributions-calendar', ContributionsCalendar)
-
 new Vue({
     ...Holder
 }).$mount('#app');

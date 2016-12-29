@@ -4,7 +4,7 @@
   "description": "Simple svg contribution calendar component for vue",
   "license": "MIT",
   "repository": "user/repo",
-  "main": "dist/contributions-calendar.js",
+  "main": "dist/contributions-calendar.min.js",
   "author": {
     "name": "dkunin",
     "email": "whitemarten@gmail.com",
