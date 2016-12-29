@@ -4,14 +4,14 @@
   "description": "Simple svg contribution calendar component for vue",
   "license": "MIT",
   "repository": "user/repo",
-  "main": "dist/contributions-calendar.min.js",
+  "main": "dist/index.js",
   "author": {
     "name": "dkunin",
     "email": "whitemarten@gmail.com",
     "url": "dkunin.ru"
   },
   "scripts": {
-    "watch": "node node_modules/webpack/bin/webpack.js --watch --progress --colors --config webpack.dev.js",
+    "watch": "NODE_ENV=production node node_modules/webpack/bin/webpack.js --watch --progress --colors --config webpack.dev.js",
     "build": "NODE_ENV=production node node_modules/webpack/bin/webpack.js --config webpack.prod.js"
   },
   "devDependencies": {

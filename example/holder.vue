@@ -6,12 +6,8 @@
 </template>
 
 <script>
-  import ContributionsCalendar from '../dist/contributions-calendar.min.js';
-  console.log(ContributionsCalendar);
+  // console.log(ContributionsCalendar);
   export default {
-    components: {
-      ContributionsCalendar
-    },
     data() {
       return {
         history: {
@@ -243,7 +239,7 @@
       }
     },
     mounted() {
-      console.log(this.history);
+      // console.log(this.history);
     }
   }
 </script>

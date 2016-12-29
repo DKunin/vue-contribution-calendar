@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/example',
+    entry: './example/index',
     output: {
         path: './dist',
         filename: 'bundle.js'
@@ -35,7 +35,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
         title: '',
-        template: './src/index.tpl'
+        template: './example/index.tpl'
     })
   ]
 };
