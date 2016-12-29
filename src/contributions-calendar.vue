@@ -1,17 +1,19 @@
 <template>
-   <svg width="820" height="500">
-      <g v-for="(day, index) in days" width="10" height="10" :data-index="(day.dayIndex + 1)" :data-week-index="day.weekIndex" :data-day-index="day.dayIndex"> 
-        <rect
-          :x="day.weekIndex * 13"
-          :y="day.dayIndex  * 13"
-          :fill="calculateValue(day.date)"
-          width="10"
-          height="10"
-        >
-          <title>{{day.date}}</title>
-        </rect>
-      </g>
-    </svg>
+  <div>
+     <svg width="700" height="100">
+        <g v-for="(day, index) in days" width="10" height="10" :data-index="(day.dayIndex + 1)" :data-week-index="day.weekIndex" :data-day-index="day.dayIndex"> 
+          <rect
+            :x="day.weekIndex * 13"
+            :y="day.dayIndex  * 13"
+            :fill="calculateValue(day.date)"
+            width="10"
+            height="10"
+          >
+            <title>{{day.date}}</title>
+          </rect>
+        </g>
+      </svg>
+  </div>
 </template>
 
 <script>
