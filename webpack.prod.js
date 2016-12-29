@@ -6,7 +6,10 @@ module.exports = {
     entry: './src/contributions-calendar',
     output: {
         path: './dist',
-        filename: 'index.js'
+        filename: 'index.js',
+        publicPath: '/',
+        library: 'contributionsCalendar',
+        libraryTarget: 'umd'
     },
     resolve: {
         extensions: ['', '.js', '.vue'],
@@ -49,13 +52,22 @@ module.exports = {
             }
         ]
     },
+    vue: {
+        loaders: {
+            js: 'babel-loader'
+        }
+    },
     plugins: [
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: '"production"'
+          }
+        }),
         // new webpack.optimize.UglifyJsPlugin({
-        //     sourceMap: false,
-        //     drop_console: true,
-        //     compress: {
-        //         warnings: false
-        //     }
-        // })
+        //   compress: {
+        //     warnings: false
+        //   }
+        // }),
+        new webpack.optimize.OccurenceOrderPlugin()
   ]
 };

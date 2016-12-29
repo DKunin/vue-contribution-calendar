@@ -1,12 +1,10 @@
 <template>
   <div>
-     <ContributionsCalendar :history="history" :year="2016" />
-
+     <contributionsCalendar :history="history" :year="2016" />
   </div>
 </template>
 
 <script>
-  // console.log(ContributionsCalendar);
   export default {
     data() {
       return {
@@ -239,7 +237,7 @@
       }
     },
     mounted() {
-      // console.log(this.history);
+      console.log(this.history);
     }
   }
 </script>

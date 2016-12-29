@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div> 
+    Cal:
      <svg width="700" height="100">
-        <g v-for="(day, index) in days" width="10" height="10" :data-index="(day.dayIndex + 1)" :data-week-index="day.weekIndex" :data-day-index="day.dayIndex"> 
+        <g v-for="(day, index) in days" width="10" height="10"> 
           <rect
             :x="day.weekIndex * 13"
             :y="day.dayIndex  * 13"
@@ -19,7 +20,7 @@
 <script>
   import { daysOfTheYear } from './generate-days';
 
-  export default {
+  module.exports = {
     props: {
       year: {
         type: Number,
@@ -54,6 +55,7 @@
       }
     },
     mounted() {
+      console.log('asd');
       this.days = daysOfTheYear(this.year);
     }
   }

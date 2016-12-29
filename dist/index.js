@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["contributionsCalendar"] = factory();
+	else
+		root["contributionsCalendar"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -34,7 +44,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -75,13 +85,9 @@
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
 	var _generateDays = __webpack_require__(2);
 
-	exports.default = {
+	module.exports = {
 	  props: {
 	    year: {
 	      type: Number,
@@ -116,9 +122,11 @@
 	    }
 	  },
 	  mounted: function mounted() {
+	    console.log('asd');
 	    this.days = (0, _generateDays.daysOfTheYear)(this.year);
 	  }
 	}; //
+	//
 	//
 	//
 	//
@@ -202,7 +210,7 @@
 /***/ function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _h('div', [_h('svg', {
+	  return _h('div', [" \n  Cal:\n   ", _h('svg', {
 	    attrs: {
 	      "width": "700",
 	      "height": "100"
@@ -211,10 +219,7 @@
 	    return _h('g', {
 	      attrs: {
 	        "width": "10",
-	        "height": "10",
-	        "data-index": (day.dayIndex + 1),
-	        "data-week-index": day.weekIndex,
-	        "data-day-index": day.dayIndex
+	        "height": "10"
 	      }
 	    }, [_h('rect', {
 	      attrs: {
@@ -229,4 +234,6 @@
 	},staticRenderFns: []}
 
 /***/ }
-/******/ ]);
+/******/ ])
+});
+;
