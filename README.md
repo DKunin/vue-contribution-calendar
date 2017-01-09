@@ -2,6 +2,9 @@
 
 > Vue component to reproduce github contribution calendar with zero dependecies.
 
+Example: 
+![Example](https://raw.githubusercontent.com/DKunin/vue-contribution-calenadar/master/example/example.png)
+
 ## Table of Contents
 
 - [Install](#install)
