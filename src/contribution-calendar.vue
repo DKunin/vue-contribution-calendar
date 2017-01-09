@@ -1,6 +1,5 @@
 <template>
   <div> 
-    Cal:
      <svg width="700" height="100">
         <g v-for="(day, index) in days" width="10" height="10"> 
           <rect
@@ -55,7 +54,6 @@
       }
     },
     mounted() {
-      console.log('asd');
       this.days = daysOfTheYear(this.year);
     }
   }

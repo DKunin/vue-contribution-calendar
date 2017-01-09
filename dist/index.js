@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["contributionsCalendar"] = factory();
+		exports["contributionCalendar"] = factory();
 	else
-		root["contributionsCalendar"] = factory();
+		root["contributionCalendar"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -122,11 +122,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  mounted: function mounted() {
-	    console.log('asd');
 	    this.days = (0, _generateDays.daysOfTheYear)(this.year);
 	  }
 	}; //
-	//
 	//
 	//
 	//
@@ -210,7 +208,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _h('div', [" \n  Cal:\n   ", _h('svg', {
+	  return _h('div', [_h('svg', {
 	    attrs: {
 	      "width": "700",
 	      "height": "100"

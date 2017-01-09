@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Holder from './holder';
 
-var contributionsCalendar = require('../dist');
+var contributionCalendar = require('../src');
 
 if (__DEV__) {
     window.Vue = Vue;
@@ -11,6 +11,6 @@ if (__DEV__) {
 new Vue({
     ...Holder,
     ...{
-        components: { contributionsCalendar }
+        components: { contributionCalendar }
     }
 }).$mount('#app');

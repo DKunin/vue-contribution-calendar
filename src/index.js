@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./contributions-calendar');
+module.exports = require('./contribution-calendar');
