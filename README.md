@@ -14,7 +14,7 @@ Example:
 
 ## Install
 
-```
+```console
     npm install vue-contribution-calendar
 ```
 
@@ -22,7 +22,7 @@ Example:
 
 In any your vue file:
 
-```
+```vue
     <template>
         <contributionCalendar :history="history" :year="2016" />
     </template>
@@ -51,7 +51,7 @@ In any your vue file:
 
 Fork, run:
 
-```
+```console
     npm run watch
 ```
 and patch away.
