@@ -25,7 +25,10 @@
         type: Number,
         default: new Date().getFullYear()
       },
-      history: Object
+      history: {
+        type: Object,
+        default: () => ({})
+      }
     },
     data() {
       return {

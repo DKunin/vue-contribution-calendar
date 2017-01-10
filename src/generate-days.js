@@ -50,4 +50,5 @@ function getWeek(year, month, day) {
     var d1 = ((d4 - L) % 365) + L;
     return Math.floor(d1 / 7) + 1;
 }
+
 module.exports = { generateDays, daysOfTheYear, getWeek };
