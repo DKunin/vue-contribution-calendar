@@ -11,7 +11,6 @@
     "url": "dkunin.ru"
   },
   "scripts": {
-    "prepublish": "npm run build",
     "watch": "node node_modules/webpack/bin/webpack.js --watch --progress --colors --config webpack.dev.js",
     "build": "NODE_ENV=production node node_modules/webpack/bin/webpack.js --config webpack.prod.js"
   },
