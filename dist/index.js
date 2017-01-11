@@ -214,18 +214,18 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', [_c('svg', {
+	  return _h('div', [_h('svg', {
 	    attrs: {
 	      "width": "700",
 	      "height": "100"
 	    }
-	  }, _vm._l((_vm.days), function(day, index) {
-	    return _c('g', {
+	  }, [_vm._l((_vm.days), function(day, index) {
+	    return _h('g', {
 	      attrs: {
 	        "width": "10",
 	        "height": "10"
 	      }
-	    }, [_c('rect', {
+	    }, [_h('rect', {
 	      attrs: {
 	        "x": day.weekIndex * 13,
 	        "y": day.dayIndex * 13,
@@ -233,8 +233,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        "width": "10",
 	        "height": "10"
 	      }
-	    }, [_c('title', [_vm._v(_vm._s(day.date))])])])
-	  }))])
+	    }, [_h('title', [_vm._s(day.date)])])])
+	  })])])
 	},staticRenderFns: []}
 
 /***/ }
