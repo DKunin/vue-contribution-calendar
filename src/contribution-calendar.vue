@@ -1,15 +1,16 @@
 <template>
   <div> 
      <svg width="700" height="100">
-        <g v-for="(day, index) in days" width="10" height="10"> 
+        <g v-for="(day, index) in days"> 
           <rect
             :x="day.weekIndex * 13"
             :y="day.dayIndex  * 13"
             :fill="calculateValue(day.date)"
             width="10"
             height="10"
+            v-on:click="cellClick(day.date, history[day.date])"
           >
-            <title>{{day.date}}</title>
+            <title>{{day.date}}:{{history[day.date]||0}}</title>
           </rect>
         </g>
       </svg>
@@ -27,6 +28,10 @@
       },
       history: {
         type: Object,
+        default: () => ({})
+      },
+      cellClick: {
+        type: Function,
         default: () => ({})
       }
     },

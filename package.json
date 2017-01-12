@@ -1,6 +1,6 @@
 {
   "name": "vue-contribution-calendar",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Simple svg contribution calendar component for vue",
   "license": "MIT",
   "repository": "https://github.com/dkunin/vue-contribution-calenadar",
@@ -11,7 +11,6 @@
     "url": "dkunin.ru"
   },
   "scripts": {
-    "prepublish": "npm run build",
     "watch": "node node_modules/webpack/bin/webpack.js --watch --progress --colors --config webpack.dev.js",
     "build": "NODE_ENV=production node node_modules/webpack/bin/webpack.js --config webpack.prod.js"
   },
@@ -27,10 +26,11 @@
     "html-webpack-plugin": "2.20.0",
     "vue-loader": "10.0.2",
     "transfer-webpack-plugin": "0.1.4",
-    "vue-template-compiler": "2.1.3",
+    "vue-template-compiler": "2.1.8",
     "vue-hot-reload-api": "2.0.6",
     "extract-text-webpack-plugin": "1.0.1",
-    "vue-template-compiler": "2.1.8",
-    "vue-html-loader": "1.2.3"
+    "vue-html-loader": "1.2.3",
+    "css-loader": "0.26.1",
+    "vue-style-loader": "1.0.0"
   }
 }

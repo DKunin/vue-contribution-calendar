@@ -98,6 +98,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      default: function _default() {
 	        return {};
 	      }
+	    },
+	    cellClick: {
+	      type: Function,
+	      default: function _default() {
+	        return {};
+	      }
 	    }
 	  },
 	  data: function data() {
@@ -130,6 +136,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.days = (0, _generateDays.daysOfTheYear)(this.year);
 	  }
 	}; //
+	//
 	//
 	//
 	//
@@ -214,27 +221,27 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _h('div', [_h('svg', {
+	  return _c('div', [_c('svg', {
 	    attrs: {
 	      "width": "700",
 	      "height": "100"
 	    }
-	  }, [_vm._l((_vm.days), function(day, index) {
-	    return _h('g', {
-	      attrs: {
-	        "width": "10",
-	        "height": "10"
-	      }
-	    }, [_h('rect', {
+	  }, _vm._l((_vm.days), function(day, index) {
+	    return _c('g', [_c('rect', {
 	      attrs: {
 	        "x": day.weekIndex * 13,
 	        "y": day.dayIndex * 13,
 	        "fill": _vm.calculateValue(day.date),
 	        "width": "10",
 	        "height": "10"
+	      },
+	      on: {
+	        "click": function($event) {
+	          _vm.cellClick(day.date, _vm.history[day.date])
+	        }
 	      }
-	    }, [_h('title', [_vm._s(day.date)])])])
-	  })])])
+	    }, [_c('title', [_vm._v(_vm._s(day.date) + ":" + _vm._s(_vm.history[day.date] || 0))])])])
+	  }))])
 	},staticRenderFns: []}
 
 /***/ }
