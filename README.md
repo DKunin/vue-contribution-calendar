@@ -24,7 +24,7 @@ In any your vue file:
 
 ```vue
     <template>
-        <contributionCalendar :history="history" :year="2016" />
+        <contributionCalendar :history="history" :year="2016" :cellClick="someMethod" />
     </template>
 
     <script>
@@ -33,6 +33,11 @@ In any your vue file:
       export default {
         components: {
           contributionCalendar
+        },
+        methods: {
+          someMethod(date, value) {
+            ...
+          }
         },
         data() {
           return {

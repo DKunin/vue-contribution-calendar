@@ -2,8 +2,14 @@
       <contributionCalendar
         :history="history"
         :year="2016"
-        :cellClick="someMethod"/>
+        :cellClick="someMethod" />
 </template>
+
+<style>
+  rect {
+    cursor: pointer;
+  }
+</style>
 
 <script>
   var historyObject = {
@@ -35,10 +41,7 @@
   export default {
     methods: {
       someMethod(date, value) {
-        // console.log(date, value);
-        //history[date] = history[date] ? history[date]++ : 1;
-        console.log(historyObject);
-        //this.history = history;
+        this.$set(this.history, date, value ? ++value : 1);
       }
     },
     data() {
