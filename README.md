@@ -5,6 +5,10 @@
 Example: 
 ![Example](https://raw.githubusercontent.com/DKunin/vue-contribution-calenadar/master/example/example.png)
 
+Live Demo:
+![Demo](https://dkunin.github.io/vue-contribution-calendar)
+Be sure to checkout the course and click on the rectangles - have fun!
+
 ## Table of Contents
 
 - [Install](#install)
