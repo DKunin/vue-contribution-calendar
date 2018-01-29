@@ -1,13 +1,13 @@
 <template>
   <div> 
-     <svg width="700" height="100">
-        <g v-for="(day, index) in days"> 
+     <svg width="100vw" height="13vw">
+        <g v-for="(day, index) in days" v-bind:key="index"> 
           <rect
-            :x="day.weekIndex * 13"
-            :y="day.dayIndex  * 13"
+            :x="day.weekIndex * screenWidth"
+            :y="day.dayIndex  * screenWidth"
             :fill="calculateValue(day.date)"
-            width="10"
-            height="10"
+            width="1.5vw"
+            height="1.5vw"
             v-on:click="cellClick(day.date, history[day.date])"
           >
             <title>{{day.date}}:{{history[day.date]||0}}</title>
@@ -40,21 +40,38 @@
         days: []
       }
     },
+    computed: {
+      screenWidth () {
+        return screen.width / 54;
+      }
+    },    
     methods: {
       calculateValue(value) {
         const valueExists = this.history[value];
         if (valueExists) {
-          if (valueExists >= 10) {
-            return '#1e6823'
+          if (valueExists >= 8) {
+            return '#000'
           }
-          if (valueExists >= 7 & valueExists < 10) {
-            return '#44a340'
+          if (valueExists == 7) {
+            return '#005824'
           }
-          if (valueExists >= 4 & valueExists < 7) {
-            return '#8cc665'
+          if (valueExists == 6) {
+            return '#238b45'
           }
-          if (valueExists <= 3) {
-            return '#d6e685'
+          if (valueExists == 5) {
+            return '#41ae76'
+          }
+          if (valueExists == 4) {
+            return '#66c2a4'
+          }
+          if (valueExists == 3) {
+            return '#99d8c9'
+          }
+          if (valueExists == 2) {
+            return '#ccece6'
+          }
+          if (valueExists == 1) {
+            return '#edf8fb'
           }
 
         }
